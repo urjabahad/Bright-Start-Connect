@@ -1,64 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volunteer Registeration</title>
+    <title>Volunteer Confirmation Form</title>
     <style>
-        
-        @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,500;1,400;1,500&family=Red+Hat+Text:ital,wght@0,400;0,500;1,400&family=Righteous&display=swap');
-              @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,500;1,400;1,500&family=Righteous&display=swap');
-            </style>
-    <link rel="stylesheet" href="volunteer-s.css">
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: black;
+            background-image: url("https://www.fast2sms.com/help/wp-content/uploads/2019/12/Bulk-SMS-Service-for-NGO.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #B5D99C;
+            opacity: 0.8;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 400px;
+        }
+
+        h1 {
+            color: #0F0326;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            color: #0F0326;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #0F0326;
+            border-radius: 8px;
+            box-sizing: border-box;
+            margin-top: 5px;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #E65F5C;
+        }
+
+        button {
+            background-color: #E65F5C;
+            color: #F5F7DC;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #FFFF82;
+        }
+    </style>
 </head>
+
 <body>
     <div class="container">
-        <div class="main">
-            <div class="image">
-                <div id="image-overlay">
-                    <p>Transforming Lives Through Education: <br>
-                        Volunteer Now</p>
-                    <!-- Add more text or elements as needed -->
-                </div>
+        <h1>Volunteer Confirmation Form</h1>
+        <form action="/volunteer/confirm" method="POST">
+            <div class="form-group">
+                <label for="name">Your Full Name:</label>
+                <input type="text" id="name" name="name" required>
             </div>
-            <div class="form-d">
-                <h2>Application Form</h2>
-                <div class="form-body">
-                    <form action=""><input type="text" name="" id="field" placeholder="Full name" required><br>
-                        Date of birth<input type="date" name="" id="field" style="margin-top: 2%;" required><br>
-                        <input type="phone" name=""  placeholder="Mobile number" id="field" required><br>
-                        <input type="email" name="" placeholder="Email address" id="field" required><br>
-                        Location<select name="" id="field">
-                            <option value="Mumbai">Mumbai</option>
-                            <option value="Pune">Pune</option>
-                            <option value="Surat">Surat</option>
-                            <option value="Delhi">Delhi</option>
-                        </select><br>
-                        Work Preference
-                        <div style="display: flex; justify-content: left;"><div class="1" style="margin-right: 15%;"><input type="checkbox" name="" id="">Teaching Asst</div>
-                            <div class="1"><input type="checkbox" name="" id="">Content Writing</div></div>
-                            <div style="display: flex; justify-content: left;">
-                            <div class="1" style="margin-right: 19%;"><input type="checkbox" name="" id="">Mentorship</div>
-                            <div class="1"><input type="checkbox" name="" id="">Doubt Solving</div></div><br>
-                        <label for="availableDays">Available Days:</label>
-    <select id="availableDays" name="availableDays" multiple>
-        <option value="monday">Monday</option>
-        <option value="tuesday">Tuesday</option>
-        <option value="wednesday">Wednesday</option>
-        <option value="thursday">Thursday</option>
-        <option value="friday">Friday</option>
-        <option value="saturday">Saturday</option>
-        <option value="sunday">Sunday</option>
-    </select><br>
-
-    <label for="availableTimes">Available Times:</label>
-    <input type="text" id="field"name="availableTimes" placeholder="e.g., Morning, Afternoon, Evening"><br>
-                        <div class="check"><input type="checkbox" name="" id="" required>You agree with the terms and conditions of foundation</div><br>
-                        <button>Submit</button></form>
-                </div>
-            </div>  
-        </div>
-        
+            <div class="form-group">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Preferred Volunteer Location:</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+            <div class="form-group">
+                <label for="time">Available Time:</label>
+                <input type="text" id="time" name="time" required>
+            </div>
+            <div class="form-group">
+                <label for="place">Preferred Volunteer Place:</label>
+                <input type="text" id="place" name="place" required>
+            </div>
+            <button type="submit">Submit Volunteer Request</button>
+        </form>
     </div>
 </body>
+
 </html>
