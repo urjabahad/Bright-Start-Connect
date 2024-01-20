@@ -1,0 +1,38 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Download Example</title>
+</head>
+<body>
+
+  <button id="downloadPdfButton">Download Letter</button>
+<script>
+
+
+  document.getElementById('downloadPdfButton').addEventListener('click', async () => {
+    try {
+      const response = await fetch('/generatePdf', { method: 'POST' });
+  
+      if (response.ok) {
+        const pdfBlob = await response.blob();
+        const downloadLink = document.createElement('a');
+  
+        downloadLink.href = window.URL.createObjectURL(pdfBlob);
+        downloadLink.download = 'downloaded_pdf.pdf';
+        downloadLink.click();
+  
+        window.URL.revokeObjectURL(downloadLink.href);
+      } else {
+        console.error('Failed to generate PDF:', response.status, response.statusText);
+      }
+    } catch (error) {
+      console.error('Fetch error:', error);
+    }
+  });
+</script>
+  
+</body>
+</html>

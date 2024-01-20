@@ -25,12 +25,16 @@
     border-bottom-left-radius: 5%;
     background-size: cover;
 }
+.container{
+    height: 100%;
+    width: 100%;
+}
 .main{
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 2%;
     margin-bottom: 2%;
-    height: 95vh;
+    height: 94vh;
     width: 80vw;
     border-radius: 5%;
     border: solid  2px;
@@ -38,6 +42,8 @@
     box-sizing: border-box;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     flex-direction: row;
+     /* Changed to column layout */
+            overflow-y: auto;
 }
 .form-d{
     color: #0F0326;
@@ -107,4 +113,20 @@ button {
 
 button:hover {
   background: #f1f179;
+}
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column; /* Change to a column layout on smaller screens */
+        width: 90%; /* Adjusted width for better responsiveness */
+        margin: 2% auto; /* Center the form */
+    }
+
+    .image {
+        
+        width: 100%;
+        border-bottom-left-radius: 0; /* Remove bottom-left border radius for better display */
+    }
+    #image-overlay{
+        display: none;
+    }
 }

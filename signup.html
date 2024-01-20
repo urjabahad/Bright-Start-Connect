@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        #image-overlay {
+            position: absolute;
+            top: 82%;
+            left: 30%;
+            font-family: 'Mulish', sans-serif;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .image {
+            background-image: url("https://www.fast2sms.com/help/wp-content/uploads/2019/12/Bulk-SMS-Service-for-NGO.jpg");
+            background-color: black;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 50%;
+            height: 100%;
+            border-top-left-radius: 5%;
+            /* Adjust the top-left corner radius */
+            border-bottom-left-radius: 5%;
+            background-size: cover;
+        }
+
+        .main {
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 2%;
+            margin-bottom: 1%;
+            height: 120vh;
+            width: 80vw;
+            border-radius: 5%;
+            border: solid 2px;
+            display: flex;
+            box-sizing: border-box;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            flex-direction: row;
+        }
+
+        .form-d {
+            color: #0F0326;
+            margin-left: 5%;
+            margin-right: 10%;
+            margin-top: 2%;
+            margin-bottom: 1%;
+            padding-bottom: 6%;
+        }
+
+        h2 {
+            color: #0F0326;
+            margin-bottom: 5%;
+            font-family: 'Mulish', sans-serif;
+        }
+
+        .form-body {
+            font-family: 'Red Hat Text', sans-serif;
+            margin-left: 5%;
+            display: flex;
+            margin-right: 2%;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #field {
+            border: none;
+            outline: none;
+            width: 100%;
+            border-bottom: black 1px solid;
+        }
+
+        a {
+            color: black;
+        }
+
+        a:hover {
+            color: blue;
+        }
+
+        /* CSS */
+        button {
+            margin-bottom: 2%;
+            background-color: initial;
+            background-image: linear-gradient(-180deg, #FFFF82, #FFFF82);
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+            color: #000;
+            cursor: pointer;
+            display: inline-block;
+            font-family: Inter, -apple-system, system-ui, Roboto, "Helvetica Neue", Arial, sans-serif;
+            height: 44px;
+            line-height: 44px;
+            outline: 0;
+            overflow: hidden;
+            padding: 0 20px;
+            pointer-events: auto;
+            position: relative;
+            text-align: center;
+            touch-action: manipulation;
+            user-select: none;
+            -webkit-user-select: none;
+            vertical-align: top;
+            white-space: nowrap;
+            width: 100%;
+            z-index: 9;
+            border: 0;
+        }
+
+        button:hover {
+            background: #f1f179;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="image">
+                <div id="image-overlay">
+                    <p>Transforming Lives Through Education: <br>
+                        Volunteer Now</p>
+                    <!-- Add more text or elements as needed -->
+                </div>
+            </div>
+            <div class="form-d">
+                <h2>Application Form</h2>
+                <div class="form-body">
+                    <form action="/volunteer/signup" method="POST" novalidate class="needs-validation">
+                        <input type="text" name="username" id="field" placeholder="Full name" class="form-control"
+                            required><br>
+                        Date of birth<input type="date" name="dateOfBirth" id="field" style="margin-top: 2%;"
+                            class="form-control" required><br>
+                        <input type="phone" name="mobileNumber" placeholder="Mobile number" id="field"
+                            class="form-control" required><br>
+                        <input type="email" name="emailAddress" placeholder="Email address" id="field"
+                            class="form-control" required><br>
+                        Password: <input type="password" name="password" id="field" class="form-control" required><br>
+                        Location<select name="location" id="field" class="form-control">
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Pune">Pune</option>
+                            <option value="Surat">Surat</option>
+                            <option value="Delhi">Delhi</option>
+                        </select><br>
+                        Work Preference
+                        <!-- ... your HTML code ... -->
+
+                        <div style="display: flex; justify-content: left;">
+                            <div class="1" style="margin-right: 15%;" class="form-control">
+                                <input type="checkbox" name="workPreference.teachingAssistant" id="">Teaching Asst
+                            </div>
+                            <div class="1">
+                                <input type="checkbox" name="workPreference.contentWriting" id="">Content Writing
+                            </div>
+                        </div>
+                        <div style="display: flex; justify-content: left;">
+                            <div class="1" style="margin-right: 19%;">
+                                <input type="checkbox" name="workPreference.mentorship" id="">Mentorship
+                            </div>
+                            <div class="1">
+                                <input type="checkbox" name="workPreference.doubtSolving" id="">Doubt Solving
+                            </div>
+                        </div><br>
+
+                        <!-- ... rest of your HTML code ... -->
+
+                        <label for="availableDays">Available Days:</label>
+                        <select id="availableDays" name="availableDays" multiple class="form-control">
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                            <option value="Saturday">Saturday</option>
+                            <option value="Sunday">Sunday</option>
+                        </select><br>
+
+                        <label for="availableTimes">Available Times:</label>
+                        <input type="text" id="field" name="availableTimes"
+                            placeholder="e.g., Morning, Afternoon, Evening" class="form-control"><br>
+                        <div class="check"><input type="checkbox" name="" id="">You agree with the terms and conditions
+                            of foundation</div><br>
+                        <button>Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
