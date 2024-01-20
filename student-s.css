@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #0F0326;
+    font-family: 'Red Hat Text', sans-serif;
+}
+.image{
+    background-image: url('help.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 50%;
+    height: 100%;
+    border-top-left-radius: 4%; /* Adjust the top-left corner radius */
+    border-bottom-left-radius: 5%;
+    background-size: cover;
+}
+.main{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 3.5%;
+    margin-bottom: 2%;
+    height: 87vh;
+    width: 80vw;
+    border-radius: 5%;
+    border: solid  2px;
+    display: flex;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    flex-direction: row;
+}
+.form-d{
+    margin-left: 5%;
+    margin-right: 10%;
+    margin-top: 3.5%;
+    margin-bottom: 3.5%;
+    padding-bottom: 6%;
+}
+h2{
+    margin-bottom: 12%;
+    margin-top: 4%;
+    font-family: 'Mulish', sans-serif;
+}
+.form-body{
+    margin-left: 5%;
+    display: flex;
+    margin-right: 2%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+#field{
+    border: none;
+    outline: none;
+    width: 100%;
+    border-bottom: black 1px solid;
+}
+a{
+    color: black;
+}
+a:hover{
+    color: blue;
+}
+/* CSS */
+button {
+    margin-bottom: 2%;
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #FFFF82, #FFFF82);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  height: 44px;
+  line-height: 44px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 100%;
+  z-index: 9;
+  border: 0;
+}
+
+button:hover {
+  background: #f1f179;
+}
