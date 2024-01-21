@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Student Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <link href="css/sb-admin-4.min.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+                <div class="sidebar-brand-text mx-3">Volunteer</div>
+            </a>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Tables</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-certificate"></i>
+                    <span>Certificate</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-envelope"></i>
+                    <span>LOR</span>
+                </a>
+            </li>
+            <hr class="sidebar-divider d-none d-md-block">
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        </ul>
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <ul class="navbar-nav ml-auto">
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Urja Bahad</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+
+                        <li class="nav-item" style="margin-top: 15px;">
+                            <a href="#" class="btn btn-success"
+                                style="background-color: #0F0326; border: 1px solid #0F0326; padding: 6px 12px; color: white;">
+                                Log Out
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="container-fluid">
+                    <p class="mb-4">Student data, as received by the partner school.</p>
+                    <div class="card shadow mb-4">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Sr. No.</th>
+                                            <th>Name</th>
+                                            <th>Gender</th>
+                                            <th>Grade</th>
+                                            <th>Reason</th>
+                                            <th>Category</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Amit Kumar</td>
+                                            <td>Male</td>
+                                            <td>Grade 8</td>
+                                            <td>Orphan</td>
+                                            <td>Free lunch program</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Priya Sharma</td>
+                                            <td>Female</td>
+                                            <td>Grade 7</td>
+                                            <td>Single parent household</td>
+                                            <td>Scholarship recipient</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Rahul Singh</td>
+                                            <td>Male</td>
+                                            <td>Grade 9</td>
+                                            <td>Low-income family</td>
+                                            <td>Part-time job after school</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Anjali Patel</td>
+                                            <td>Female</td>
+                                            <td>Grade 10</td>
+                                            <td>Immigrant family</td>
+                                            <td>ESL (English as a Second Language) program</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Rajiv Verma</td>
+                                            <td>Male</td>
+                                            <td>Grade 8</td>
+                                            <td>Low-income family</td>
+                                            <td>Free lunch program</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>Mona Desai</td>
+                                            <td>Female</td>
+                                            <td>Grade 9</td>
+                                            <td>Orphan</td>
+                                            <td>Free lunch program</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>Krish Patel</td>
+                                            <td>Male</td>
+                                            <td>Grade 7</td>
+                                            <td>Single parent household</td>
+                                            <td>Scholarship recipient</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td>Simran Gupta</td>
+                                            <td>Female</td>
+                                            <td>Grade 10</td>
+                                            <td>Low-income family</td>
+                                            <td>Part-time job after school</td>
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td>Aditya Mishra</td>
+                                            <td>Male</td>
+                                            <td>Grade 8</td>
+                                            <td>Immigrant family</td>
+                                            <td>ESL (English as a Second Language) program</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10</td>
+                                            <td>Deepa Patel</td>
+                                            <td>Female</td>
+                                            <td>Grade 9</td>
+                                            <td>Low-income family</td>
+                                            <td>Free lunch program</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11</td>
+                                            <td>Arun Kumar</td>
+                                            <td>Male</td>
+                                            <td>Grade 7</td>
+                                            <td>Orphan</td>
+                                            <td>Free lunch program</td>
+                                        </tr>
+                                        <tr>
+                                            <td>12</td>
+                                            <td>Kavita Singh</td>
+                                            <td>Female</td>
+                                            <td>Grade 10</td>
+                                            <td>Single parent household</td>
+                                            <td>Scholarship recipient</td>
+                                        </tr>
+                                        <tr>
+                                            <td>13</td>
+                                            <td>Nikhil Sharma</td>
+                                            <td>Male</td>
+                                            <td>Grade 8</td>
+                                            <td>Immigrant family</td>
+                                            <td>Part-time job after school</td>
+                                        </tr>
+                                        <tr>
+                                            <td>14</td>
+                                            <td>Arpita Das</td>
+                                            <td>Female</td>
+                                            <td>Grade 9</td>
+                                            <td>Low-income family</td>
+                                            <td>ESL (English as a Second Language) program</td>
+                                        </tr>
+                                        <tr>
+                                            <td>15</td>
+                                            <td>Vikram Joshi</td>
+                                            <td>Male</td>
+                                            <td>Grade 7</td>
+                                            <td>Low-income family</td>
+                                            <td>Free lunch program</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="vendor/jquery.min.js"></script>
+    <script src="vendor/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <script src="js/sb-admin-2.min.js"></script>
+    <script src="vendor/jquery.dataTables.min.js"></script>
+    <script src="vendor/dataTables.bootstrap4.min.js"></script>
+    <script src="js/datatables-demo.js"></script>
+</body>
+
+</html>
