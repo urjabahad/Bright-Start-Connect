@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Volunteer Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="css/sb-admin-1.min.css" rel="stylesheet">
+    
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+                <div class="sidebar-brand-text mx-3">Volunteer</div>
+            </a>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Tables</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-certificate"></i>
+                    <span>Certificate</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-envelope"></i>
+                    <span>LOR</span>
+                </a>
+            </li>
+            <hr class="sidebar-divider d-none d-md-block">
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        </ul>
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <ul class="navbar-nav ml-auto">
+                        <div class="topbar-divider d-none d-sm-block"></div>
+                
+                       
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Urja Bahad</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+                        <li class="nav-item mt-3">
+                            <a href="#" class="btn btn-success" style="background-color: #0F0326; border: 1px solid #0F0326;">
+                                Log Out
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Number of Hours Volunteered</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">14</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-clock fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Total number of tasks completed</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">31</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-list fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Impact Achieved</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">100%</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-leaf fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-8 col-lg-7">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Working Timeline</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-area">
+                                        <canvas id="myAreaChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-5">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">My Earning</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-pie pt-4 pb-2">
+                                        <canvas id="myPieChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 mb-4">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Upcoming Tasks</h6>
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="small font-weight-bold">Coding and Computer Science Mentorship<span class="float-right">Jan 25, 2024, 10:00 AM</span>
+                                    </h4>
+                                    <p class="mb-4"> Volunteer as a mentor in our coding and computer science program. Guide students in learning programming languages, understanding algorithms, and developing problem-solving skills in the field of technology.</p>
+                                    <h4 class="small font-weight-bold">Homework Assistance Program<span class="float-right">Feb 5, 2024, 2:30 PM</span>
+                                    </h4>
+                                    <p class="mb-4">Support students in their academic journey by providing assistance with homework assignments. Help clarify concepts, review lessons, and guide students in understanding and completing their homework successfully.</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 mb-4">
+                                    <a href="#" class="btn btn-success btn-block" style="background-color: #0F0326; border: 1px solid #0F0326;">
+                                        Give your Feedback
+                                    </a>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <a href="#" class="btn btn-success btn-block" style="background-color: #0F0326; border: 1px solid #0F0326;">
+                                        Contact Us
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mb-4">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">What your previous Employer had to say!</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 20rem;" src="https://images.all-free-download.com/images/graphiclarge/business_background_candidate_employer_icons_cartoon_characters_6838690.jpg">
+                                    </div>
+                                    <p><i>"Thank you for your incredible fundraising efforts! 🌟 Your passion and commitment have made a lasting impact. Together, we're creating positive change. Keep shining bright!"</i></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="vendor/jquery.min.js"></script>
+    <script src="vendor/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <script src="js/sb-admin-2.min.js"></script>
+    <script src="vendor/Chart.min.js"></script>
+    <script src="js/chart-area-demo.js"></script>
+    <script src="js/chart-pie-demo.js"></script>
+</body>
+
+</html>
