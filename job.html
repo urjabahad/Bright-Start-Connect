@@ -1,0 +1,1168 @@
+<!--
+    THIS PAGE LISTS ALL THE AVAILABLE OPPORTUNIIES ON THE BRIGHT-START-CONNECT PAGE WHICH ALLOWS VOLUNTEERS TO FIND THE PERFECT 
+    OPPORTUNITY THATS INTERESTS THEM THE MOST 
+-->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Open-jobs</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Nunito:200,300,400,700);
+
+        .site-navbar {
+            margin-bottom: 0;
+            z-index: 1999;
+            position: absolute;
+            width: 100%;
+            top: 2rem
+        }
+
+        .site-navbar .container-fluid {
+            padding-left: 7rem;
+            padding-right: 7rem
+        }
+
+        @media (max-width:1199.98px) {
+            .site-navbar .container-fluid {
+                padding-left: 15px;
+                padding-right: 15px
+            }
+        }
+
+        .site-navbar .site-logo {
+            position: absolute;
+            left: 5%
+        }
+
+        @media (max-width:767.98px) {
+            .site-navbar .site-logo {
+                position: relative;
+                left: auto
+            }
+        }
+
+        .site-navbar .site-logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            letter-spacing: .2rem;
+            text-transform: uppercase
+        }
+
+        .site-navbar .right-cta-menu {
+            position: absolute;
+            right: 5%
+        }
+
+        @media (max-width:767.98px) {
+            .site-navbar .right-cta-menu {
+                position: relative;
+                right: auto
+            }
+        }
+
+        .site-navbar .site-menu-toggle {
+            color: #fff;
+            line-height: 0;
+            font-size: 2.5rem;
+            position: relative
+        }
+
+        @media (max-width:767.98px) {
+            .site-navbar .site-menu-toggle {
+                margin-left: 5px
+            }
+        }
+
+        .site-mobile-menu {
+            width: 300px;
+            position: fixed;
+            right: 0;
+            z-index: 2000;
+            padding-top: 20px;
+            background: #fff;
+            height: calc(100vh);
+            -webkit-transform: translateX(110%);
+            -ms-transform: translateX(110%);
+            transform: translateX(110%);
+            -webkit-box-shadow: -10px 0 20px -10px rgba(0, 0, 0, .1);
+            box-shadow: -10px 0 20px -10px rgba(0, 0, 0, .1);
+            -webkit-transition: .2s all cubic-bezier(.66, .2, .48, .9);
+            -o-transition: .2s all cubic-bezier(.66, .2, .48, .9);
+            transition: .2s all cubic-bezier(.66, .2, .48, .9)
+        }
+
+        .site-mobile-menu .site-mobile-menu-header {
+            width: 100%;
+            float: left;
+            padding-left: 20px;
+            padding-right: 20px
+        }
+
+        .site-mobile-menu .site-mobile-menu-header .site-mobile-menu-close {
+            float: right;
+            margin-top: 8px
+        }
+
+        .site-mobile-menu .site-mobile-menu-header .site-mobile-menu-close span {
+            font-size: 30px;
+            display: inline-block;
+            padding-left: 10px;
+            padding-right: 0;
+            line-height: 1;
+            cursor: pointer;
+            -webkit-transition: .3s all ease;
+            -o-transition: .3s all ease;
+            transition: .3s all ease
+        }
+
+        .site-mobile-menu .site-mobile-menu-header .site-mobile-menu-close span:hover {
+            color: #dee2e6
+        }
+
+        .site-mobile-menu .site-mobile-menu-header .site-mobile-menu-logo {
+            float: left;
+            margin-top: 10px;
+            margin-left: 0
+        }
+
+        .site-mobile-menu .site-mobile-menu-header .site-mobile-menu-logo a {
+            display: inline-block;
+            text-transform: uppercase
+        }
+
+        .site-mobile-menu .site-mobile-menu-header .site-mobile-menu-logo a img {
+            max-width: 70px
+        }
+
+        .site-mobile-menu .site-mobile-menu-header .site-mobile-menu-logo a:hover {
+            text-decoration: none
+        }
+
+        .site-mobile-menu .site-mobile-menu-body {
+            overflow-y: scroll;
+            -webkit-overflow-scrolling: touch;
+            position: relative;
+            padding: 0 20px 20px 20px;
+            height: calc(100vh - 52px);
+            padding-bottom: 150px
+        }
+
+        body {
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.7;
+            position: relative
+        }
+
+        body:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, .7);
+            z-index: 100;
+            opacity: 0;
+            visibility: hidden;
+            -webkit-transition: .3s all ease;
+            -o-transition: .3s all ease;
+            transition: .3s all ease
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: #000
+        }
+
+        .site-section {
+            padding-top: 7rem;
+            padding-bottom: 7rem;
+            position: relative;
+            z-index: 2
+        }
+
+        @media (max-width:991.98px) {
+            .site-section {
+                padding-top: 3rem;
+                padding-bottom: 3rem
+            }
+        }
+
+        .home-section {
+            position: relative
+        }
+
+        .home-section>.container {
+            z-index: 2;
+            position: relative
+        }
+
+        .home-section h1 {
+            font-size: 3rem;
+            color: #fff;
+            font-weight: 200
+        }
+
+        @media (max-width:991.98px) {
+            .home-section h1 {
+                font-size: 2rem
+            }
+        }
+
+        .home-section p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, .6)
+        }
+
+        .bg-image {
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat
+        }
+
+        .bg-image.fixed {
+            background-attachment: fixed
+        }
+
+        .bg-image.overlay-primary {
+            position: relative
+        }
+
+        .bg-image.overlay-primary:before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(137, 186, 22, .9);
+            z-index: 1
+        }
+
+        .bg-image.overlay-primary>.container {
+            position: relative;
+            z-index: 2
+        }
+
+        .logo-1 {
+            max-width: 200px
+        }
+
+        @media (max-width:767.98px) {
+            .logo-1 {
+                max-width: 150px
+            }
+        }
+
+        .logo-2 {
+            max-width: 150px
+        }
+
+        @media (max-width:767.98px) {
+            .logo-2 {
+                max-width: 100px
+            }
+        }
+
+        .logo-3 {
+            max-width: 120px
+        }
+
+        @media (max-width:767.98px) {
+            .logo-3 {
+                max-width: 75px
+            }
+        }
+
+        .logo-4 {
+            max-width: 100px
+        }
+
+        @media (max-width:767.98px) {
+            .logo-4 {
+                max-width: 75px
+            }
+        }
+
+        .logo-5 {
+            max-width: 50px
+        }
+
+        @media (max-width:767.98px) {
+            .logo-5 {
+                max-width: 50px
+            }
+        }
+
+        .logo-6 {
+            max-width: 150px
+        }
+
+        @media (max-width:767.98px) {
+            .logo-6 {
+                max-width: 150px
+            }
+        }
+
+        .logo-7 {
+            max-width: 180px
+        }
+
+        @media (max-width:767.98px) {
+            .logo-7 {
+                max-width: 150px
+            }
+        }
+
+        .logo-8 {
+            max-width: 90px
+        }
+
+        @media (max-width:767.98px) {
+            .logo-8 {
+                max-width: 90px
+            }
+        }
+
+        .job-listings {
+            padding: 0;
+            margin: 0;
+            border: 1px solid #eee;
+            border-radius: 7px;
+            overflow: hidden;
+            position: relative;
+            background: #fff
+        }
+
+        .job-listings .badge {
+            color: #fff;
+            padding: 4px 10px
+        }
+
+        @media (max-width:991.98px) {
+            .job-listings .custom-width {
+                width: 100% !important
+            }
+        }
+
+        .job-listings .job-listing {
+            position: relative;
+            border-bottom: 1px solid #eee;
+            -webkit-transition: .3s all ease;
+            -o-transition: .3s all ease;
+            transition: .3s all ease
+        }
+
+        .job-listings .job-listing:last-child {
+            border-bottom: none
+        }
+
+        .job-listings .job-listing a {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-transition: .3s all ease;
+            -o-transition: .3s all ease;
+            transition: .3s all ease
+        }
+
+        .job-listings .job-listing a:hover {
+            border-left: 7px solid #89ba16
+        }
+
+        .job-listings .job-listing .job-listing-logo {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 150px;
+            flex: 0 0 150px;
+            border-right: 1px solid #eee
+        }
+
+        @media (max-width:575.98px) {
+            .job-listings .job-listing .job-listing-logo {
+                -webkit-box-flex: 0;
+                -ms-flex: 0 0 100%;
+                flex: 0 0 100%
+            }
+        }
+
+        .job-listings .job-listing-position h2 {
+            font-size: 1.2rem;
+            margin-bottom: 0
+        }
+
+        .job-listings .job-listing-position strong {
+            color: #b3b3b3
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700
+        }
+
+        .section-hero,
+        .section-hero>.container>.row {
+            height: 100vh;
+            min-height: 900px
+        }
+
+        .section-hero.overlay,
+        .section-hero.overlay-2 {
+            position: relative
+        }
+
+        .section-hero.overlay-2:before,
+        .section-hero.overlay:before {
+            z-index: 1;
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, .5)
+        }
+
+        .section-hero.overlay-2:before {
+            background: rgba(125, 131, 132, .95)
+        }
+
+        .section-hero>.container {
+            z-index: 2;
+            position: relative
+        }
+
+        .btn:after,
+        .btn:before {
+            display: none
+        }
+
+        .btn:active,
+        .btn:focus,
+        .btn:hover {
+            outline: 0;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important
+        }
+
+        .btn.btn-primary {
+            color: #0f0326;
+            background: #ffff82;
+            border-color: #ffff82
+        }
+
+        .btn.btn-primary:hover {
+            background: #ffff82;
+            border-color: #ffff82
+        }
+
+        .btn.btn-outline-white {
+            background: 0 0;
+            border-width: 2px;
+            border-color: #ffff82;
+            color: #0f0326
+        }
+
+        .btn.btn-outline-white:hover {
+            background: #fff;
+            color: #000
+        }
+
+        .btn.btn-outline-primary {
+            color: #89ba16
+        }
+
+        .btn.btn-outline-primary:hover {
+            color: #fff;
+            background: #89ba16
+        }
+
+        .border-width-2 {
+            border-width: 2px !important
+        }
+
+        .btn-md {
+            padding: 12px 20px
+        }
+
+        .block__19738 {
+            text-align: center
+        }
+
+        .block__19738 [class^=flaticon-],
+        .block__19738 [class^=icon-] {
+            font-size: 2.5rem
+        }
+
+        .block__62849 .block__16443 {
+            background: #fff;
+            padding: 30px;
+            -webkit-transition: .3s all ease;
+            -o-transition: .3s all ease;
+            transition: .3s all ease;
+            top: 0;
+            position: relative;
+            text-decoration: none
+        }
+
+        .block__62849 .block__16443 .custom-icon {
+            display: block;
+            position: relative;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 1px solid #89ba16;
+            background: #89ba16;
+            margin-bottom: 1.5rem;
+            -webkit-transition: .3s all ease;
+            -o-transition: .3s all ease;
+            transition: .3s all ease
+        }
+
+        .block__62849 .block__16443 .custom-icon:before {
+            display: none;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            content: "";
+            width: 90px;
+            height: 90px;
+            border: 1px solid rgba(137, 186, 22, .2)
+        }
+
+        .block__62849 .block__16443 [class^=flaticon-],
+        .block__62849 .block__16443 [class^=icon-] {
+            font-size: 1.6rem;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            -webkit-transition: .3s all cubic-bezier(.66, .2, .48, .9);
+            -o-transition: .3s all cubic-bezier(.66, .2, .48, .9);
+            transition: .3s all cubic-bezier(.66, .2, .48, .9)
+        }
+
+        .block__62849 .block__16443 h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.2rem
+        }
+
+        .block__62849 .block__16443 p {
+            color: #7f848c
+        }
+
+        .block__62849 .block__16443:hover {
+            top: -20px;
+            -webkit-box-shadow: 0 10px 30px -10px rgba(0, 0, 0, .2);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, .2)
+        }
+
+        @media (max-width:991.98px) {
+            .block__62849 .block__16443:hover {
+                top: 0
+            }
+        }
+
+        .block__62849 .block__16443:hover .custom-icon {
+            background: 0 0
+        }
+
+        .block__62849 .block__16443:hover .custom-icon [class^=flaticon-],
+        .block__62849 .block__16443:hover .custom-icon [class^=icon-] {
+            color: #89ba16
+        }
+
+        .block__87154 {
+            position: relative;
+            background: #f8f9fa;
+            padding: 30px;
+            margin-bottom: 2rem;
+            border-radius: 7px
+        }
+
+        .block__87154.bg-primary {
+            -webkit-box-shadow: 0 5px 30px -5px rgba(137, 186, 22, .8);
+            box-shadow: 0 5px 30px -5px rgba(137, 186, 22, .8)
+        }
+
+        .block__87154.bg-primary p {
+            font-size: 1.5rem;
+            font-weight: 300;
+            font-style: italic
+        }
+
+        .block__87154 :last-child {
+            margin-bottom: 0
+        }
+
+        .block__87154 .block__91147 img {
+            max-width: 40px;
+            border-radius: 50%;
+            margin: 0;
+            padding: 0
+        }
+
+        .block__87154 .block__91147 h3 {
+            margin: 0;
+            padding: 0;
+            font-size: 1rem
+        }
+
+        .block__87154 .position {
+            font-size: .8rem;
+            color: #adb5bd
+        }
+
+        .block__87154 .position.position-2 {
+            color: rgba(255, 255, 255, .6)
+        }
+
+        .block__96788 {
+            position: relative;
+            display: block
+        }
+
+        .block__86547 {
+            position: relative;
+            background: #f8f9fa;
+            overflow: hidden;
+            border-radius: 4px;
+            -webkit-transition: .2s all cubic-bezier(.66, .2, .48, .9);
+            -o-transition: .2s all cubic-bezier(.66, .2, .48, .9);
+            transition: .2s all cubic-bezier(.66, .2, .48, .9);
+            top: 0
+        }
+
+        .block__86547>div {
+            padding: 40px
+        }
+
+        .block__86547>div h3 {
+            font-size: 1.4rem
+        }
+
+        .block__86547>div h3 a {
+            color: #000
+        }
+
+        .block__86547>div h3 a:hover {
+            text-decoration: none
+        }
+
+        .block__86547>div .block__27192>a {
+            font-size: .9rem;
+            display: inline-block;
+            margin: 10px 20px;
+            margin-left: 0;
+            color: #495057
+        }
+
+        .block__86547>div .block__27192>a span {
+            color: #adb5bd
+        }
+
+        .block__86547>div .block__27192>a:hover {
+            text-decoration: none
+        }
+
+        .block__86547:hover {
+            top: -10px;
+            background: #fff;
+            -webkit-box-shadow: 0 5px 20px -2px rgba(0, 0, 0, .2);
+            box-shadow: 0 5px 20px -2px rgba(0, 0, 0, .2)
+        }
+
+        .block__45439 {
+            padding: 7em 0
+        }
+
+        .site-menu-toggle:hover {
+            text-decoration: none
+        }
+
+        .site-footer {
+            position: relative;
+            background-color: #0f0326;
+            padding: 20px
+        }
+
+        @media (max-width:991.98px) {
+            .site-footer {
+                padding: 2rem 0
+            }
+        }
+
+        .site-footer h3 {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            color: #fff
+        }
+
+        .site-footer a {
+            color: rgba(255, 255, 255, .5)
+        }
+
+        .site-footer a:hover {
+            color: #fff
+        }
+
+        .site-footer ul li {
+            margin-bottom: .5rem
+        }
+
+        .site-footer ul li a {
+            color: rgba(255, 255, 255, .5)
+        }
+
+        .site-footer ul li a:hover {
+            color: #fff
+        }
+
+        .site-footer .scroll-top {
+            position: absolute;
+            z-index: 5;
+            top: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #fff;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1)
+        }
+
+        .site-footer .scroll-top>span {
+            position: absolute;
+            font-size: 2rem;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            color: #000 !important
+        }
+
+        .social a:hover {
+            background: #343a40
+        }
+
+        .social a:hover span {
+            color: #fff
+        }
+
+        @-webkit-keyframes wheel-up-down {
+            0% {
+                margin-top: 2px;
+                opacity: 0
+            }
+
+            30% {
+                opacity: 1
+            }
+
+            100% {
+                margin-top: 20px;
+                opacity: 0
+            }
+        }
+
+        @-moz-keyframes wheel-up-down {
+            0% {
+                margin-top: 2px;
+                opacity: 0
+            }
+
+            30% {
+                opacity: 1
+            }
+
+            100% {
+                margin-top: 20px;
+                opacity: 0
+            }
+        }
+
+        @keyframes wheel-up-down {
+            0% {
+                margin-top: 2px;
+                opacity: 0
+            }
+
+            30% {
+                opacity: 1
+            }
+
+            100% {
+                margin-top: 20px;
+                opacity: 0
+            }
+        }
+
+        .block__18514 .block__47528 li {
+            margin-bottom: 10px
+        }
+
+        .block__18514 .block__47528 li span {
+            font-weight: 700;
+            color: #000
+        }
+
+        .block__18514 .block__47528 li a {
+            display: block
+        }
+
+        .single-carousel img {
+            max-width: 400px;
+            margin-left: auto
+        }
+
+        @media (max-width:991.98px) {
+            .single-carousel img {
+                margin-left: auto;
+                margin-right: auto
+            }
+        }
+    </style>
+</head>
+
+<body id="top">
+    <div class="site-wrap">
+        <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+        <header class="site-navbar mb-0">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="site-logo col-6"><a href="">Bright-Start-Connect</a></div>
+
+                    <div class="right-cta-menu text-right d-flex align-items-center col-6">
+                        <div class="ml-auto">
+                            <a href="#" class="btn btn-primary border-width-2 d-none d-lg-inline-block">
+                                <span class="mr-2"><i class="fas fa-user"></i></span>Register
+                            </a>
+                            <a href="#" class="btn btn-primary border-width-2 d-none d-lg-inline-block">
+                                <span class="mr-2"><i class="fas fa-sign-in-alt"></i></span>Log In
+                            </a>
+                        </div>
+                        <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3">
+                            <span class="icon-menu h3 m-0 p-0 mt-2"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="home-section section-hero overlay bg-image mb-1"
+            style="background-image: url('https://cdn.dribbble.com/users/1700221/screenshots/5098340/media/6c8c59392d3477bad6c1e2b5ab79f511.gif');"
+            id="home-section">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-12">
+                        <div class="mb-5 text-center">
+                            <h1 class="text-white font-weight-bold">Empowering Futures, One Student at a Time</h1>
+                            <p>Bridging Education Gaps for underprevilaged students through Holistic Support and
+                                Opportunities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="site-section">
+            <div class="container">
+
+                <div class="row mb-5 justify-content-center">
+                    <div class="col text-center">
+                        <h2 class="section-title mb-2">Actively Hiring</h2>
+                    </div>
+                </div>
+
+                <ul class="job-listings">
+                    <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
+                        <a href=""></a>
+                        <div class="job-listing-logo">
+                            <img src="https://www.legalbites.in/wp-content/uploads/2018/03/Hamari-Pehchan-2.jpg"
+                                class="img-fluid">
+                        </div>
+
+                        <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
+                            <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
+                                <h2>Social Entrepreneurship</h2>
+                                <strong>Hamari Pahchan NGO</strong>
+                            </div>
+                            <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
+                                <i class="fa-solid fa-location-dot"></i>Work From Home
+                            </div>
+                            <div class="job-listing-meta">
+                                <span class="badge badge-danger">Part Time</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
+                        <a href=""></a>
+                        <div class="job-listing-logo">
+                            <img src="https://i.ndtvimg.com/i/2015-04/aap-logo-650_650x400_41428497829.jpg"
+                                class="img-fluid">
+                        </div>
+
+                        <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
+                            <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
+                                <h2>Social Media Management</h2>
+                                <strong>Aam Aadmi Party</strong>
+                            </div>
+                            <div class="job-listing-location  mb-sm-0 custom-width w-25">
+                                <i class="fa-solid fa-location-dot"></i>Delhi
+                            </div>
+                            <div class="job-listing-meta">
+                                <span class="badge badge-success">Full Time</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
+                        <a href=""></a>
+                        <div class="job-listing-logo">
+                            <img src="data:image/png;base64,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"
+                                class="img-fluid">
+                        </div>
+                        <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
+                            <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
+                                <h2>Content Writing</h2>
+                                <strong>Marpu Foundation</strong>
+                            </div>
+                            <div class="job-listing-location mb-sm-0 custom-width w-25">
+                                <i class="fa-solid fa-location-dot"></i>Kolkata
+                            </div>
+                            <div class="job-listing-meta">
+                                <span class="badge badge-success">Full Time</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
+                        <a href=""></a>
+                        <div class="job-listing-logo">
+                            <img src="https://s3-ap-south-1.amazonaws.com/internshala-uploads-new/google_logo/631afb32b226f1662712626.jpeg"
+                                class="img-fluid">
+                        </div>
+
+                        <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
+                            <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
+                                <h2>Personal Assistance</h2>
+                                <strong>Kshitiksha Foundation</strong>
+                            </div>
+                            <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
+                                <i class="fa-solid fa-location-dot"></i> Virtual
+                            </div>
+                            <div class="job-listing-meta">
+                                <span class="badge badge-success">Full Time</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="py-5 bg-image overlay-primary fixed overlay"
+            style="background-image: url('https://t4.ftcdn.net/jpg/01/67/31/43/360_F_167314337_fG3GVAiWPlu8i0NG7VHWE8N6bOEQloCG.jpg');">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h2 class="text-white"><i>"Ready to create positive change?"</i></h2>
+                    </div>
+                    <div class="col-md-3 ml-auto">
+                        <a href="#" class="btn btn-warning btn-block btn-lg">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+
+
+        <!-- Carousel wrapper -->
+        <div id="carouselMultiItemExample" class="carousel slide carousel-dark text-center" data-mdb-ride="carousel">
+            <!-- Inner -->
+            <div class="carousel-inner py-4">
+                <!-- Single item -->
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <img class="rounded-circle shadow-1-strong mb-4"
+                                    src="https://cdn-icons-png.flaticon.com/512/9565/9565427.png"
+                                    style="width: 150px;" />
+                                <h5 class="mb-3">Sarah James</h5>
+                                <p> Volunteer</p>
+                                <p class="text-muted">
+                                    <i class="fas fa-quote-left pe-2"></i>
+                                    "BRIGHT START CONNECT has been an incredible platform for me to make a meaningful
+                                    impact
+                                    in education. As a volunteer, I've had the opportunity to contribute to various
+                                    educational initiatives. The process of connecting with organizations is seamless,
+                                    and the sense of purpose in helping students is truly rewarding."
+                                </p>
+                                <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                                    <li><i class="fas fa-star fa-sm"></i></li>
+                                    <li><i class="fas fa-star fa-sm"></i></li>
+                                    <li><i class="fas fa-star fa-sm"></i></li>
+                                    <li><i class="fas fa-star fa-sm"></i></li>
+                                    <li><i class="fas fa-star fa-sm"></i></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-lg-4 d-none d-lg-block">
+                                <img class="rounded-circle shadow-1-strong mb-4"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Physics_wallah_logo.jpg/800px-Physics_wallah_logo.jpg"
+                                    alt="" style="width: 150px;" />
+                                <h5 class="mb-3">Rahul J, Education Director</h5>
+                                <p>ABC Learning Institute</p>
+                                <p class="text-muted">
+                                    <i class="fas fa-quote-left pe-2"></i>
+                                    "BRIGHT START CONNECT has been an invaluable resource for our organization. The
+                                    platform effectively connects us with dedicated volunteers who share our passion for
+                                    education. The ease of use and the quality of volunteers have made a significant
+                                    impact on our educational programs."
+                                </p>
+                                <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                                    <li><i class="fas fa-star fa-sm"></i></li>
+                                    <li><i class="fas fa-star fa-sm"></i></li>
+                                    <li><i class="fas fa-star fa-sm"></i></li>
+                                    <li><i class="fas fa-star fa-sm"></i></li>
+                                    <li>
+                                        <i class="fas fa-star-half-alt fa-sm"></i>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="col-lg-4 d-none d-lg-block">
+                                <img class="rounded-circle shadow-1-strong mb-4"
+                                    src="data:image/jpeg;base64,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"
+                                    style="width: 150px;" />
+                                <h5 class="mb-3">Jassi Manoj</h5>
+                                <p>Student</p>
+                                <p class="text-muted">
+                                    <i class="fas fa-quote-left pe-2"></i>
+                                    "I am incredibly grateful for the support I've received through BRIGHT START
+                                    CONNECT. The volunteers brought a new level of enthusiasm to our learning
+                                    environment, making education more engaging and enjoyable. Their dedication has
+                                    inspired me to pursue my academic goals with renewed confidence."
+                                </p>
+                                <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                                    <li><i class="fas fa-star fa-sm"></i></li>
+                                    <li><i class="fas fa-star fa-sm"></i></li>
+                                    <li><i class="fas fa-star fa-sm"></i></li>
+                                    <li><i class="fas fa-star fa-sm"></i></li>
+                                    <li><i class="far fa-star fa-sm"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <img class="rounded-circle shadow-1-strong mb-4"
+                                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(3).webp" alt="avatar"
+                                    style="width: 150px;" />
+                                <h5 class="mb-3">John Doe</h5>
+                                <p>UX Designer</p>
+                                <p class="text-muted">
+                                    <i class="fas fa-quote-left pe-2"></i>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id
+                                    officiis hic tenetur quae quaerat ad velit ab hic tenetur.
+                                </p>
+                                <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                                    <li><i class="fas fa-star fa-sm"></i></li>
+                                    <li><i class="fas fa-star fa-sm"></i></li>
+                                    <li><i class="fas fa-star fa-sm"></i></li>
+                                    <li><i class="fas fa-star fa-sm"></i></li>
+                                    <li><i class="fas fa-star fa-sm"></i></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-lg-4 d-none d-lg-block">
+                                <img class="rounded-circle shadow-1-strong mb-4"
+                                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(4).webp" alt="avatar"
+                                    style="width: 150px;" />
+                                <h5 class="mb-3">Alex Rey</h5>
+                                <p>Web Developer</p>
+                                <p class="text-muted">
+                                    <i class="fas fa-quote-left pe-2"></i>
+                                    Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
+                                    suscipit laboriosam, nisi ut aliquid commodi.
+                                </p>
+                                <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                                    <li><i class="fas fa-star fa-sm"></i></li>
+                                    <li><i class="fas fa-star fa-sm"></i></li>
+                                    <li><i class="fas fa-star fa-sm"></i></li>
+                                    <li><i class="fas fa-star fa-sm"></i></li>
+                                    <li>
+                                        <i class="fas fa-star-half-alt fa-sm"></i>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="col-lg-4 d-none d-lg-block">
+                                <img class="rounded-circle shadow-1-strong mb-4"
+                                    src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(5).webp" alt="avatar"
+                                    style="width: 150px;" />
+                                <h5 class="mb-3">Maria Kate</h5>
+                                <p>Photographer</p>
+                                <p class="text-muted">
+                                    <i class="fas fa-quote-left pe-2"></i>
+                                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                                    praesentium voluptatum deleniti atque corrupti.
+                                </p>
+                                <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+                                    <li><i class="fas fa-star fa-sm"></i></li>
+                                    <li><i class="fas fa-star fa-sm"></i></li>
+                                    <li><i class="fas fa-star fa-sm"></i></li>
+                                    <li><i class="fas fa-star fa-sm"></i></li>
+                                    <li><i class="far fa-star fa-sm"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <footer class="site-footer">
+            <a href="#top" class="smoothscroll scroll-top">
+                <span><i class="fa-solid fa-angle-up" style="color: black;"></i></span>
+            </a>
+        </footer>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
