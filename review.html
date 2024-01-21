@@ -1,8 +1,11 @@
 
+<%- layout("/layouts/boilerplate") -%>  
 <style>
     body {
-        background-color: #0F0326;
+        /* background-color: #0F0326; */
         /* background-image: url("https://www.trainerbubble.com/wp-content/uploads/2015/09/Rapid-Review_web.jpg"); */
+        background-image: url("https://www.htworld.co.uk/wp-content/uploads/2022/01/AdobeStock_298848395-1000x600.jpeg");
+        /* background-image: url("https://images.squarespace-cdn.com/content/v1/517b126fe4b0d5eb59d9a72f/1509896948365-QZ98Q7L6AJL91YQ1Y4GB/ke17ZwdGBToddI8pDm48kE_Flx8FzqgJ6wV1_BmCavpZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxDowSvHNKM7uXktlTsd4PePhFwcAqvuqHhGG9Stix-l5CUypTMB8SVm3C-9T8WJqc/Shared+Experience2.png"); */
         background-size: cover;
         background-repeat: no-repeat;
         opacity: 0.9;
@@ -14,68 +17,92 @@
         margin: 0;
     }
 
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s, visibility 0.5s;
+    }
+
     .review-form {
         background-color: #b5d99c;
+        opacity:1;
         color: #E65F5C;
-        padding: 40px; /* Increased padding */
-        border-radius: 15px; /* Increased border-radius */
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Increased box-shadow */
-        max-width: 500px; /* Increased max-width */
-        margin: auto;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        max-width: 600px;
+        height: 400px;
         width: 100%;
-
-        /* Animation properties */
-        animation-name: slideIn;
-        animation-duration: 4s;
-        animation-timing-function: ease;
-        animation-fill-mode: both;
-
+        transform: scale(0.7);
+        transition: transform 0.5s ease;
     }
-    @keyframes slideIn {
-        from {
-            margin-right: 100%; /* Slide in from the right */
-        }
-        to {
-            margin-right: 0; /* Slide to the center */
-        }
+
+    .overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .overlay.active .review-form {
+        transform: scale(1);
     }
 
     .btn-outline-dark:hover {
-            background-color: #F0807F; 
-            color: white;
-        }
+        background-color: #F0807F; 
+        color: white;
+    }
 </style>
 
 <body>
-    <div class="review-form">
-        <h4 class="text-center mb-3"> Leave a Review </h4>
-        <form method="POST" novalidate="needs-validation">
-            <div class="mb-3">
-                <label for="rating" class="form-label"></label>
-                <fieldset class="starability-coinFlip">
-                    <legend>Rating</legend>
-                    <input type="radio" id="no-rate" class="input-no-rate" name="rating" value="0" checked aria-label="No rating." />
-                    <input type="radio" id="first-rate1" name="rating" value="1" />
-                    <label for="first-rate1" title="Terrible">1 star</label>
-                    <input type="radio" id="first-rate2" name="rating" value="2" />
-                    <label for="first-rate2" title="Not good">2 stars</label>
-                    <input type="radio" id="first-rate3" name="rating" value="3" />
-                    <label for="first-rate3" title="Average">3 stars</label>
-                    <input type="radio" id="first-rate4" name="rating" value="4" />
-                    <label for="first-rate4" title="Very good">4 stars</label>
-                    <input type="radio" id="first-rate5" name="rating" value="5" />
-                    <label for="first-rate5" title="Amazing">5 stars</label>
-                  </fieldset>
-            </div>
-            <div class="mb-3">
-                <label for="comment" class="form-label"> <legend>Comment</legend></label>
-                <textarea name="review[comment]" id="comment" cols="30" rows="5" class="form-control" required></textarea>
-            </div>
-            <div class="text-center">
-                <button class="btn btn-outline-dark">Submit</button>
-            </div>
-            
-        </form>
+    <div class="overlay" id="overlay">
+        <div class="review-form">
+            <h4 class="text-center mb-3"> Share your Experience</h4>
+            <form method="POST" novalidate="needs-validation">
+                <!-- Form content as before -->
+                <div class="mb-3">
+                    <label for="rating" class="form-label"></label>
+                    <fieldset class="starability-coinFlip">
+                        <legend>Rating</legend>
+                        <input type="radio" id="no-rate" class="input-no-rate" name="rating" value="0" checked aria-label="No rating." />
+                        <input type="radio" id="first-rate1" name="rating" value="1" />
+                        <label for="first-rate1" title="Terrible">1 star</label>
+                        <input type="radio" id="first-rate2" name="rating" value="2" />
+                        <label for="first-rate2" title="Not good">2 stars</label>
+                        <input type="radio" id="first-rate3" name="rating" value="3" />
+                        <label for="first-rate3" title="Average">3 stars</label>
+                        <input type="radio" id="first-rate4" name="rating" value="4" />
+                        <label for="first-rate4" title="Very good">4 stars</label>
+                        <input type="radio" id="first-rate5" name="rating" value="5" />
+                        <label for="first-rate5" title="Amazing">5 stars</label>
+                      </fieldset>
+                </div>
+                <div class="mb-3">
+                    <label for="comment" class="form-label"> <legend>Experience</legend></label>
+                    <textarea name="review[comment]" id="comment" cols="30" rows="5" class="form-control" placeholder="My experience at ..."required></textarea>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-outline-dark">Submit</button>
+                </div>
+                
+            </form>
+        </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var overlay = document.getElementById("overlay");
+
+            // Show the overlay
+            overlay.classList.add("active");
+        });
+    </script>
 </body>
 </html>
