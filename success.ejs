@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Successful Confirmation</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to right, #6A0572, #AB83A1);
+        }
+
+        .popup {
+            background-color: #F5F7DC;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            width: 300px;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            z-index: 900;
+        }
+
+        .message {
+            font-size: 20px;
+            color: #0F0326;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            font-size: 16px;
+            color: #102770;
+            margin-bottom: 20px;
+        }
+
+        .close-btn {
+            background-color: #E65F5C;
+            color: #F5F7DC;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .close-btn:hover {
+            background-color: #0F0326;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <p class="message">Successfully Confirmed!</p>
+        <p class="content">You have successfully confirmed a candidate for the position.</p>
+        <button class="close-btn" onclick="closePopup()">Close</button>
+    </div>
+
+    <!-- Your successful confirmation content goes here -->
+    <!-- Add any additional content or customize the message as needed -->
+
+    <script>
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+            // Redirect to another page (change the URL as needed)
+            //window.location.href = '/lander';
+        }
+
+        // Call showPopup() when you want to display the confirmation pop-up
+        // For example, after a successful form submission
+        showPopup();
+    </script>
+</body>
+
+</html>
