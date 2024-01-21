@@ -304,11 +304,10 @@
             animation-timing-function: ease-in-out;
   }
     body {
-        /* background-color: #0F0326; */
-        /* background-image: url("https://www.trainerbubble.com/wp-content/uploads/2015/09/Rapid-Review_web.jpg"); */
-        background-image: url("https://www.htworld.co.uk/wp-content/uploads/2022/01/AdobeStock_298848395-1000x600.jpeg");
-        /* background-image: url("https://images.squarespace-cdn.com/content/v1/517b126fe4b0d5eb59d9a72f/1509896948365-QZ98Q7L6AJL91YQ1Y4GB/ke17ZwdGBToddI8pDm48kE_Flx8FzqgJ6wV1_BmCavpZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxDowSvHNKM7uXktlTsd4PePhFwcAqvuqHhGG9Stix-l5CUypTMB8SVm3C-9T8WJqc/Shared+Experience2.png"); */
+        
+        background-image: url(https://www.dishafoundation.ngo/img/slider-1.jpeg);
         background-size: cover;
+        backdrop-filter: grayscale(20%);
         background-repeat: no-repeat;
         opacity: 0.9;
         backface-visibility: visible;
@@ -335,19 +334,70 @@
     }
 
     .review-form {
-        background-color: #b5d99c;
-        opacity:1;
-        color: #E65F5C;
-        padding: 40px;
+        background-color: #f7f5dc;
+        color: #0F0326;
+        padding: 25px;
         border-radius: 15px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
         max-width: 600px;
         height: 400px;
         width: 100%;
+        display: flex;
+        flex-direction: column;
         transform: scale(0.7);
         transition: transform 0.5s ease;
     }
-
+    h4{
+        text-align: center;
+        font-weight: bolder;
+        font-size: 27px;
+    }
+    .mb-3{
+        display: flex;
+       flex-direction: column;
+        justify-content: center;
+        
+    }
+    .mb-3 legend{
+        font-size: 18px;
+        font-weight: bold;
+        padding: 20px;
+        margin-left: -230px;
+    }
+    .mb-3 fieldset{
+       left: 230px;
+    }
+    .mb-31{
+        display: flex;
+       flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+    .mb-31 legend{
+        font-size: 18px;
+        font-weight: bold;
+        padding: 20px;
+    }
+    .mb-31 textarea{
+        position: relative;
+        left: 20px;
+        width: 550px;
+        border: 2px solid #0F0326;
+        border-radius: 10px;
+        padding: 5px;
+    }
+    .text-center{
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+    }
+    .text-center button{
+        padding: 10px 30px;
+        border-radius: 20px;
+        border: none;
+        background-color: #0F0326;
+        color: #f7f5dc;
+    }
     .overlay.active {
         opacity: 1;
         visibility: visible;
@@ -358,8 +408,8 @@
     }
 
     .btn-outline-dark:hover {
-        background-color: #F0807F; 
-        color: white;
+        background-color: #ffff82; 
+        color: #0F0326;
     }
 </style>
 
@@ -368,7 +418,7 @@
         <div class="review-form">
             <h4 class="text-center mb-3"> Share your Experience</h4>
             <form method="POST" novalidate="needs-validation">
-                <!-- Form content as before -->
+                
                 <div class="mb-3">
                     <label for="rating" class="form-label"></label>
                     <fieldset class="starability-coinFlip">
@@ -386,7 +436,7 @@
                         <label for="first-rate5" title="Amazing">5 stars</label>
                       </fieldset>
                 </div>
-                <div class="mb-3">
+                <div class="mb-31">
                     <label for="comment" class="form-label"> <legend>Experience</legend></label>
                     <textarea name="review[comment]" id="comment" cols="30" rows="5" class="form-control" placeholder="My experience at ..."required></textarea>
                 </div>
