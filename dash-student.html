@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student DashBoard</title>
+<style>
+     @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,500;1,400;1,500&family=Red+Hat+Text:ital,wght@0,400;0,500;1,400&family=Righteous&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,500;1,400;1,500&family=Righteous&display=swap');
+    a{
+        color: beige;
+        text-decoration: none;
+    }
+    body {
+        overflow-y: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Red Hat Text';
+}
+
+
+    
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .container{
+        
+        display: flex;
+        height: 100vh;
+    }
+    .left{
+        height: 100vh;
+        background-color: #0F0326;
+        width: 20%;
+        color: beige;
+        
+    }
+    li{
+        transition: transform 0.3s ease-in-out;
+        margin-left: 15%;
+        margin-top: 20%;
+        list-style-type: none;
+        
+    }
+    li:hover{
+        transform: scale(1.1);
+    }
+    .right{
+    height: fit-content;
+       width: 90%;
+       display: flex;
+       flex-direction: column;
+    }
+    .att{
+        height: 50vh;
+        margin-top: 7%;
+        margin-left: 3%;
+        width: 50%;
+        padding: 3%;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2); 
+        border: beige 2px solid;
+        border-radius: 4px;
+        background-color: white;
+    }
+    .year{
+        padding: 2% 4% 2% 4%;
+        border: beige 4px solid;
+        border-radius: 4px;
+        border-left-color: #0F0326;
+        background-color: #FFFF82;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2); 
+        transition: transform 0.5 ease-in-out;
+    }
+    .year:hover{
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+    .progress{
+        /*box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2); 
+        border: beige 2px solid;
+        border-radius: 4px;
+        background-color: white;*/
+        margin-top: 1%;
+        display: flex;
+        flex-direction: column;
+        color: #0F0326;
+        height: 40%;
+        margin-top: -3%;
+    }
+    .row2,.row1{
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .row1{
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2); 
+        border: beige 2px solid;
+        border-radius: 4px;
+        background-color: white;
+        padding: 2%;
+        margin-top: 0.5%;
+        margin-left: 4%;
+        margin-right: 4%;
+        margin-bottom: 0%;
+
+    }
+    .class{
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2); 
+        border: beige 2px solid;
+        border-radius: 4px;
+        background-color: white;
+       margin-top: 2%;
+        margin-left: 4%;
+        margin-right: 5%;
+      padding-left: 4%;
+      padding-right: 4%;
+      padding-top: 1%;
+        justify-content: center;
+        flex-wrap: wrap;
+       
+    }
+    .right-r{
+        margin-left: 14%;
+        width: 60%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        margin-top: 6%;
+        justify-content: space-between;
+      
+    }
+    
+</style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <a href="dash-student.html"><li>DashBoard</li></a>
+            <a href=""><li>Help</li></a>
+            <a href=""><li>LogOut</li></a>
+            <a href=""><li>Feedback form</li></a>
+            
+        </div>
+        <div class="right">
+            <div class="row1">
+                <div class="progress">
+                    <h5 style="text-align: center; margin-top: 3%;">Completion of Grade</h5>
+                    <canvas id="completionChart" width="200" height="200" style="margin-top: 15%;"></canvas></div>
+                    <div class="right-r">
+                        <div class="year">Current grade <br> 11th</div>
+                        <div class="year">Entrance Exam <br> JEE Main</div>
+                        <div class="year">Incharge Volunteer <br> Amit Jadhav</div>  
+                    </div>
+                
+            </div>
+            <div class="row2">
+                <div class="class">
+                    <h4>Week Schedule</h4> <br>
+                    Monday: <br>
+  - 9:00 AM - 10:30 AM: Math Class <br>
+  - 11:00 AM - 12:30 PM: Physics Lab <br><br>
+
+Tuesday: <br>
+  - 10:00 AM - 11:30 AM: Chemistry Class <br><br>
+
+Wednesday: <br>
+  - 9:30 AM - 11:00 AM: Biology Lab <br><br>
+
+Thursday: <br>
+  - 10:00 AM - 11:30 AM: Chemistry Lab <br><br>
+
+Friday: <br>
+  - 9:00 AM - 10:30 AM: Math Lab <br>
+  - 11:00 AM - 12:30 PM: Physics Lecture <br><br>
+
+
+
+                </div>
+                <div class="att">
+                    <canvas id="attendanceChart" width="500" height="100"></canvas>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    <script>
+
+document.addEventListener('DOMContentLoaded', function () {
+    const attendanceData = {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        datasets: [{
+            label: 'Attendance Percentage',
+            backgroundColor: 'rgba(181, 217, 156, 0.2)',
+            borderColor: 'rgba(157, 213, 116, 1)',
+            borderWidth: 2,
+            data: [80, 85, 90, 75, 95, 88, 92, 78, 87, 94, 89, 91],
+        }],
+    };
+    const ctx = document.getElementById('attendanceChart').getContext('2d');
+    const attendanceChart = new Chart(ctx, {
+        type: 'bar',
+        data: attendanceData,
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100,
+                },
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+        },
+    });
+});
+
+
+// script.js
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Sample data for the completion chart
+    const completionData = {
+        value: 75, // Example completion percentage (replace with actual data)
+    };
+
+    // Function to draw the completion chart
+    function drawCompletionChart(data) {
+        const canvas = document.getElementById('completionChart');
+        const ctx = canvas.getContext('2d');
+        const centerX = canvas.width / 2;
+        const centerY = canvas.height / 2;
+        const radius = Math.min(centerX, centerY);
+
+        // Draw the background circle (empty circle)
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, radius - 10, 0, 2 * Math.PI);
+        ctx.lineWidth = 20;
+        ctx.strokeStyle = '#E65F5C';
+        ctx.stroke();
+
+        // Draw the completion arc
+        const startAngle = -Math.PI / 2;
+        const endAngle = (data.value / 100) * 2 * Math.PI - Math.PI / 2;
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, radius - 10, startAngle, endAngle);
+        ctx.lineWidth = 20;
+        ctx.strokeStyle = '#FFFF82'; // Color for the completion arc
+        ctx.stroke();
+
+        // Draw the center circle
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, 10, 0, 2 * Math.PI);
+        ctx.fillStyle = '#fff';
+        ctx.fill();
+
+        // Draw the value text
+        ctx.font = '20px Arial';
+        ctx.fillStyle = '#000';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(data.value + '%', centerX, centerY);
+    }
+
+    // Draw the completion chart with the sample data
+    drawCompletionChart(completionData);
+});
+
+    </script>
+</body>
+</html>
