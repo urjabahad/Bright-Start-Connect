@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Feedback Modal UI Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Red+Hat+Display:wght@300&display=swap" rel="stylesheet">
+	<style>
+        
+
+:root {
+  --bg-clr: #eaedf5;
+  --white: #fff;
+  --text-clr: #130e24;
+  --close-bg-clr: #ededed;
+  --icon-clr: #b5d99c;
+  --icon-hvr: #e65f5c;
+  --btn-send-clr: #0f0326;
+  --btn-send-hvr: #FFFF82;
+  --btn-cancel-clr: #FFFF82;
+  --border-clr: #ededed;
+  --border-hvr: #0f0326;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+  resize: none;
+  
+
+body {
+  background: var(--bg-clr);
+  color: var(--text-clr);
+  font-size: 13px;
+  font-family: 'Inter', sans-serif;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: bold;
+}
+}
+.feed{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.feed button{
+    height: 30px;
+  padding: 5px;
+  margin: 5px;
+ background-color: var(--border-hvr);
+ color: var(--close-bg-clr);
+ border: none;
+  border-radius: 3px;
+  position: relative;
+  top: 200px;
+  left: 100px;
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+.feed button:hover{
+    background-color: var(--btn-cancel-clr);
+    color: var(--btn-send-clr);
+    border: none;
+}
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.wrapper button {
+  border: 0;
+  padding: 12px 20px;
+  background: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+
+.wrapper button.send_btn {
+  border: 1px solid var(--btn-send-clr);
+  background: var(--btn-send-clr);
+  color: var(--white);
+}
+
+.wrapper button.send_btn:hover {
+  background: var(--btn-send-hvr);
+  color: var(--border-hvr);
+  border: none;
+}
+
+.wrapper button.cancel_btn {
+  border: 1px solid var(--btn-cancel-clr);
+  color: var(--border-hvr);
+  background-color: var(--btn-cancel-clr);
+  margin-left: 20px;
+}
+
+.wrapper button.cancel_btn:hover {
+  background: var(--border-hvr);
+  color: var(--close-bg-clr);
+}
+
+.modal_wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  transition: all 0.2s ease;
+}
+
+.modal_wrapper .shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.modal_wrapper .modal {
+  width: 400px;
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--white);
+  border-radius: 5px;
+  padding: 60px 40px 40px;
+}
+
+.modal .close_btn{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  background: var(--close-bg-clr);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+
+.modal .close_btn:hover{
+  background: var(--btn-send-clr);
+  color: var(--close-bg-clr)
+}
+
+.header p{
+  margin-top: 5px;
+}
+
+.header ul{
+ margin: 20px 0;
+ display: flex;
+ justify-content: space-between;
+}
+
+.header ul li{
+  font-size: 32px;
+  color: var(--icon-clr);
+  cursor: pointer;
+  transition: color 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;
+}
+.header ul li label{
+    font-size: 16px;
+    display: none;
+}
+.header ul li:hover,
+.header ul li.active{
+  color: var(--icon-hvr);
+}
+.header ul li:hover label {
+  display: block; 
+  color: var(--icon-hvr);
+}
+.body .textarea{
+  width: 100%;
+  border: 2px solid var(--btn-send-clr);
+  margin: 8px 0 20px;
+  border-radius: 5px;
+  padding: 10px;
+  height: 100px;
+  transition: border-color 0.5s ease;
+}
+
+.body .textarea:focus{
+  border-color: var(--border-hvr);
+}
+
+.footer{
+  display: flex;
+}
+
+.footer button{
+  width: 50%;
+}
+
+.wrapper.active .modal_wrapper {
+  visibility: visible;
+  transition: all 0.5s ease;
+}
+
+.wrapper.active .modal_wrapper .shadow {
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+    </style>
+	<script src="https://kit.fontawesome.com/4a0046fff5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="feed">
+    <button class="feedback_btn">Send Your Feedback</button>
+    </div>
+<div class="wrapper">
+ 
+  
+  <div class="modal_wrapper">
+    <div class="shadow close_btn"></div>
+    
+    <div class="modal">
+      <div class="close_btn">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      
+      <div class="header">
+        <h3>Give Feedback</h3>
+        <p>How was your Experience?</p>
+        
+        <div class="feedback_icons">
+          <ul>
+            <li>
+                <i class="fa-regular fa-face-sad-tear"></i>
+                <label for="">Terrible</label>
+              </li>
+            <li>
+                <i class="fa-regular fa-face-meh-blank"></i>
+              <label for="">Bad</label>
+            </li>
+            <li>
+                <i class="fa-regular fa-face-smile"></i>
+              <label for="">Average</label>
+            </li>
+            <li>
+             <i class="fa-regular fa-face-kiss-beam"></i>
+             <label for="">Good</label>
+            </li>
+            <li>
+              <i class="fa-regular fa-face-grin-hearts"></i>
+              <label for="">Best</label>
+            </li>
+           
+          </ul>
+        </div>
+      </div>
+      <div class="body">
+        <p>Do you have some insights?</p>
+        <textarea class="textarea"></textarea>
+      </div>
+      <div class="footer">
+        <button class="send_btn" id="send_btn">Send</button>
+        <button class="cancel_btn" id="cancelBtn">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+var feedback_btn = document.querySelector(".feedback_btn");
+var wrapper = document.querySelector(".wrapper");
+var close_btns = document.querySelectorAll(".close_btn");
+var li_items = document.querySelectorAll("ul li");
+var cancelBtn = document.getElementById('cancelBtn');
+feedback_btn.addEventListener("click", function () {
+  wrapper.classList.add("active");
+});
+
+close_btns.forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    wrapper.classList.remove("active");
+  });
+});
+
+li_items.forEach(function (item) {
+  item.addEventListener("click", function () {
+    li_items.forEach(function (item) {
+      item.classList.remove("active");
+    });
+
+    item.classList.add("active");
+  });
+});
+document.getElementById('send_btn').addEventListener('click', function() {
+            location.reload();
+        });
+        cancelBtn.addEventListener('click', function() {
+        
+            wrapper.classList.remove("active");
+      });
+</script>
+
+</body>
+</html>
