@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,500;1,400;1,500&family=Righteous&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            color: #0F0326;
+            height: 100vh;
+            width: 100vw;
+            background-image: url("https://png.pngtree.com/png-clipart/20230621/original/pngtree-elegant-modern-blank-blue-gold-graduation-certificate-border-frame-vector-png-image_9194407.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        h1{
+            font-family: 'Dancing Script', cursive;
+            font-size: 10vh;
+            margin-top: 2%;
+            text-align: center;
+        }
+        h3{
+            font-family: 'Dancing Script', cursive;
+            font-size: 8vh;
+            text-align: center;
+        }
+        p{
+            margin-top: 4%;
+            margin-left: 15%;
+            font-family: Mulish;
+            font-size: 4vh;
+        }
+        .name{
+            margin-left: 15%;
+            font-family: Mulish;
+        }
+    </style>
+</head>
+<body>
+    <h1>Certificate</h1>
+    <h3>of Appreciation</h3>
+    <p>This is to certify that <br>
+        <i class="n" style="font-size: 12vh;"><%= studentName %></i> <br>
+        has demonstrated exceptional commitment and dedication <br>
+        as a participant with foundation <br> <br> <br>
+    
+        In recognition of your unwavering dedication, we express our heartfelt gratitude.</p>
+
+    <p style="margin-top: 1.5%; font-size: 3vh;">
+        Awarded on <%= awardDate %> <br>
+        Foundation name
+    </p>
+</body>
+</html>
